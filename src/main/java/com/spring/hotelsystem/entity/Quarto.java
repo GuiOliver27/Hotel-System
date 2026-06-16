@@ -19,4 +19,11 @@ public class Quarto {
     private BigDecimal valorDiaria;
 
     private boolean disponivel = true;
+
+    public void setDisponivel(boolean b) {
+    }
+
+    public BigDecimal getValorDiaria() {
+        return null;
+    }
 }

@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.ManyToOne;
 import org.springframework.data.annotation.Id;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
@@ -22,4 +23,10 @@ public class Reserva {
 
     private LocalDate dataEntrada;
     private LocalDate dataSaida;
+
+    public void setValorTotal(BigDecimal valorTotal) {
+    }
+
+    public void setQuarto(Quarto quarto) {
+    }
 }
