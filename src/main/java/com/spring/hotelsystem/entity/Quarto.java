@@ -1,29 +1,36 @@
 package com.spring.hotelsystem.entity;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 
 import java.math.BigDecimal;
 
 @Entity
 public class Quarto {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String numero;
-
-    @Enumerated(EnumType.STRING)
-    private TipoQuarto tipo;
-
     private BigDecimal valorDiaria;
+    private boolean disponivel;
 
-    private boolean disponivel = true;
-
-    public void setDisponivel(boolean b) {
+    public Long getId() {
+        return id;
     }
 
     public BigDecimal getValorDiaria() {
-        return null;
+        return valorDiaria;
+    }
+
+    public void setValorDiaria(BigDecimal valorDiaria) {
+        this.valorDiaria = valorDiaria;
+    }
+
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    public void setDisponivel() {
+        this.disponivel = disponivel;
     }
 }

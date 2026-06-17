@@ -1,5 +1,6 @@
 package com.spring.hotelsystem.controller;
 
+import com.spring.hotelsystem.dto.ReservaRequest;
 import com.spring.hotelsystem.entity.Reserva;
 import com.spring.hotelsystem.repository.ReservaRepository;
 import com.spring.hotelsystem.service.ReservaService;

@@ -50,7 +50,7 @@ public class ReservaService {
         BigDecimal valorTotal = quarto.getValorDiaria()
                 .multiply(BigDecimal.valueOf(dias));
 
-        quarto.setDisponivel(false);
+        quarto.setDisponivel();
 
         Reserva reserva = new Reserva();
         reserva.setHospede(hospede);
@@ -79,7 +79,7 @@ public class ReservaService {
         reserva.setStatus(StatusReserva.CHECKOUT_REALIZADO);
 
         Quarto quarto = reserva.getQuarto();
-        quarto.setDisponivel(true);
+        quarto.setDisponivel();
 
         return reservaRepository.save(reserva);
     }
